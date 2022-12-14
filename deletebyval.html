@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let fruits = ["Banana","Mango","Papaya","Orange","Jackfruit","Kiwi","Apple","Grapes"];
+        let result = new Array();
+        function deleteByValue(deleteThis){
+                
+         result = fruits.filter(element =>{
+            if(element !== deleteThis)
+            {
+                return element
+            }
+        })
+        console.log(result)
+        }
+        deleteByValue("Papaya")
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
