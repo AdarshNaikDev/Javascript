@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const CEO = [{ id:1, name: "James"},{id:2, name:"Elon"}]
+        const managers = [{id:11, name:"Jack"},{id:12, name:"William"},{id:13, name:"Dalton"}]
+        const teamMembers = [{id:111, name:"Abhi"},{id:112, name:"Manu"},{id:113, name:"Bharath"},{id:114, name:"Prasad"},{id:115, name:"Raghu"},{id:116, name:"Diwakar"},
+        {id:117, name:"Gopi"},{id:118, name:"Prateek"},{id:119, name:"Ram"}]
+
+        const ceo_manager = [{ceo_id:1, manager_id:[11,13]},{ceo_id:2, manager_id:[12]}]
+        const manager_team = [{manager_id:11, teamMembersID:[111,118,119]}, {manager_id:12, teamMembersID:[112,113]},{manager_id:11, teamMembersID:[114,115,116,117]}]
+
+        function findCeo(idd){
+            //console.log(idd)
+            for(let i=0; i< ceo_manager.length; i++)
+            {
+                for(let j=0; j< ceo_manager[i].manager_id.length; j++)
+                {
+                    if(idd == ceo_manager[i].manager_id[j])
+                    {
+                        //console.log(ceo_manager[i].ceo_id)
+                        CEO.map((item)=>{
+                            if(ceo_manager[i].ceo_id == item.id)
+                            {
+                                console.log("ID number "+ idd +" Manager CEO is ", item.name)
+                            }
+                        })
+                    }
+                }
+                //console.log(ceo_manager[i].manager_id.length)
+               
+            }
+            //console.log(ceo_manager[0].manager_id[0])
+        }
+        //findCeo(12)
+
+
+        function findManager(team_member_id){
+            let result = "";
+            for(let i=0; i<manager_team.length; i++)
+            {
+                for(let j=0; j< manager_team[i].teamMembersID.length; j++)
+                {
+                    if(team_member_id == manager_team[i].teamMembersID[j])
+                    {
+                        //console.log(manager_team[i].manager_id)
+                        managers.map((item)=>{
+                                if(manager_team[i].manager_id == item.id)
+                                {
+                                    console.log(`team member ${team_member_id}'s manager is ${item.name}`)
+                                     result = item.id
+                                    
+                                }
+                        })
+                    }
+                }
+            }
+            return result;
+        }
+        let mang_id = findManager(111)
+       // console.log("-->",mang_id)
+        findCeo(mang_id)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
