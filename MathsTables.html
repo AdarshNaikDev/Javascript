@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Multiplication table using recursion
+        let index = 1;
+        function mathTable(num){
+            if(index <= 10)
+            {
+                let result = num*index;
+                console.log(`${num} * ${index} = ${result}`)
+                index++;
+                mathTable(num)
+            }
+            
+        }
+
+        mathTable(3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

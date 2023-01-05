@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let arr = [];
+        let current = arr.length;
+        let maxSize = 5;
+        
+        function push(newval){
+            if(current >= maxSize)
+            {
+                alert("Stack has reached it's max size" + newval)
+            }
+            else{
+                arr[current]=newval
+                current +=1;
+            }
+            
+            
+        }
+
+        function pop(){
+            console.log(current)
+            if(current>0)
+            {
+                current -=1;
+                arr.length=current
+            }
+            else
+            {
+                alert("stack is empty")
+            }
+        }
+        
+        push(10)
+        push(20)
+        push(30)
+        push(40)
+        push(50)
+        push(60)
+        pop();
+        pop();
+        pop();
+        pop();
+        pop();
+        pop();
+        
+        console.log(arr)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
