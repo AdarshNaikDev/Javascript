@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let obj = {
+            a: 1,
+            b: 2,
+            c: {
+                d: 3,
+                e: 4
+            }
+        };
+
+        let arrObj = [];
+
+        function iterateObj (obj){
+        
+            for(itemIndex  in obj)
+            {
+                if(obj.hasOwnProperty(itemIndex))
+                {
+                    let value = obj[itemIndex];
+                    if(typeof(value)=="object")
+                    {
+                        iterateObj(value)
+                    }
+                    else
+                    {
+                        arrObj.push(value)
+                    }
+                }
+            }
+            
+            
+        }
+        iterateObj(obj)
+        console.log(arrObj)
+
+        
+
+      
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

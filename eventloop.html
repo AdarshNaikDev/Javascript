@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const fun1= async()=>
+        {
+           setTimeout(()=>{
+            console.log("function 1 execution started")
+            console.log("function 2 execution started!")
+            console.log("function 2 execution ends");
+           },3000)
+        
+        }
+        function fun2(yavdo)
+        {
+           
+             yavdo();
+            
+        }
+        fun2(fun1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

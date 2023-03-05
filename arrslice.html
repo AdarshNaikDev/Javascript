@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+
+        // moveZerotoEnd(arr)
+        let arr = [1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0]
+        let newarr = [];
+function arrpush(arr,newarr){
+    let size = arr.length
+    console.log(size)
+    for(let i=0; i< arr.length; i++)
+    {
+        if(arr[i] !==0)
+        {
+            newarr.push(arr[i])
+        }
+    }
+
+    let zeroTInsert = size-newarr.length
+    for( let j =0; j<zeroTInsert; j++)
+    {
+        newarr.push(0)
+    }
+    console.log(newarr)
+}
+
+
+arrpush(arr,newarr)
+        
+        
+    </script>
+</head>
+
+<body>
+<h2>
+    Program to move all the zero's to end of an array
+</h2>
+</body>
+
+</html>
