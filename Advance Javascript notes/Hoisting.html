@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj = {
+            name: "adarsh",
+            place: "shimoga",
+            work:"bangalore"
+        }
+        const obj2 = {
+            name:"manoj",
+            place:"shimoga"
+        }
+
+        obj.work = "Karwar"
+        obj.place = "koppal",
+        obj.native = "Nr pura"
+        console.log(obj);
+
+        obj = obj2;
+        console.log(obj); // gives error assignment to a const variable
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

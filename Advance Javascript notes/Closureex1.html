@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function outer(){
+            let x=0;
+            console.log("learning closures",x)
+            function inner(){
+                console.log("inside inner function");
+                x++;
+
+                function innersInner(){
+                    console.log("i'm inner inner function!")
+                    x+= 3;
+                    console.log(`Inner inner function resule ${x}`)
+                }
+                console.log(x);
+                return innersInner;
+            }
+            return inner;
+        }
+        let greet = outer();
+        let olageOlage = greet();
+        olageOlage();
+        olageOlage();
+        olageOlage();
+
+        // greet();
+        // greet();
+        // greet();
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
