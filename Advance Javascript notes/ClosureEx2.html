@@ -15,7 +15,15 @@
                 console.log("inside the inner function");
                 name = "Manoj";
                 x++;
-                console.log(name + x +"times");
+                console.log(`${name} ${x} points`);
+
+                function innersInner(){
+                    console.log("Inside the inner inner function");
+                    name = "Siva";
+                    x+=5;
+                    console.log(`${name} ${x} points`);
+                }
+                return innersInner;
             }
 
             return inner;
@@ -25,6 +33,10 @@
         var exeFile = outer();
         exeFile();
         exeFile();
+
+        var innerMostFunction = exeFile();
+        innerMostFunction();
+        innerMostFunction();
     </script>
 </head>
 <body>
