@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // calling the parent class's constructor
+    this.breed = breed;
+  }
+
+  speak() {
+    super.speak(); // calling the parent class's speak method
+    console.log(`${this.name} barks!`);
+  }
+
+  getBreed() {
+    console.log(`${this.name} is a ${this.breed}.`);
+  }
+}
+
+const dog = new Dog("Max", "Labrador");
+dog.speak();
+dog.getBreed();
+//chat gpt answer on usage of super keyword
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

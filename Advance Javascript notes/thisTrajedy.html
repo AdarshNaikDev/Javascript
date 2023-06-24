@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj ={
+        name : "Adarsh",
+        Place : "Shimoga",
+        work: ()=>{
+            console.log(`${this.name} works at ALergy company`)
+            console.log(this.name)
+        },
+        //When arrow function is used it cannot hold the local object rather points to its windows object
+        // normal function holds the parent object keys and values rather thatn the global object
+    }
+
+    obj.work();
+    
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

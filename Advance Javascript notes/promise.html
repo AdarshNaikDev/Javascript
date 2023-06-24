@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var promiseExample = new Promise(
+            function (resolve, reject)
+            {
+                setTimeout(() => {
+                    let val = Math.floor(Math.random()*11);
+                    console.log(val)
+                    if(val >5)
+                    {
+                        resolve();
+                    }
+                    else
+                    {
+                        reject();
+                    } 
+                }, 5000);
+            }
+        )
+
+        promiseExample.then(()=>{
+            console.log("Success code received!")
+        },()=>{
+            console.log("Rejected from server!!")
+        }).catch(()=>{
+            console.log("Something went wrong with the server")
+        }).finally(()=>{
+            console.log("finally block executed!!!")
+        })
+
+        console.log("promises won't wait for anyone!!")
+
+       
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function employeeParent(){
+    this.work = ""
+    this.attendence = function (){
+        console.log("Attention is required!!")
+    }
+    this.worksOn = function (){
+        console.log("Works on react, javascript, erp next, .NET Core")
+    }
+}
+
+function managerChild(){
+    this.name = "Siva"
+    this.cabin = "A block"
+    this.worksOn = function (){
+        console.log("Works on excel, eating head, reject leaves")
+    }
+    this.vehicle = function (){
+        console.log("polo gt")
+    }
+}
+
+let empParentObj = new employeeParent();
+managerChild.prototype = empParentObj;
+
+let manChild = new managerChild();
+
+
+manChild.worksOn();
+manChild.attendence();
+console.log(manChild)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

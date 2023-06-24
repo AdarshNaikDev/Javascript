@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MoveZeroToEnd(){
+            let input = [1,2,0,4,3,0,5,0]
+            let arr = new Array();
+            let zeroArr = new Array();
+            for(let i=0; i<input.length; i++)
+            {
+                if(input[i]!=0)
+                {
+                    arr.push(input[i])
+                }
+            }
+            console.log("Non zero array", arr)
+            let len = input.length - arr.length;
+
+            for(let i=0; i<len; i++)
+            {
+                zeroArr.push(0)
+            }
+            let ans = arr.concat(zeroArr)
+
+            console.log("Final ans:",ans)
+        }
+        MoveZeroToEnd();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

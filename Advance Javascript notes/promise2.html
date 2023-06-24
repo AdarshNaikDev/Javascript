@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let prom = new Promise(
+            (resolve,reject)=>
+            {
+                setTimeout(() => {
+                    let num = 1;
+
+                if(num ===10)
+                {
+                    resolve()
+                }
+                else
+                {
+                    reject()
+                }
+                }, 3000);
+                
+            }
+        )
+
+        prom.then(()=>{
+            console.log("Promise resolved successfully")
+        },()=>{
+            console.log("Reject function use this")
+        }).catch(()=>{
+            console.log("Promises in catch block executing error")
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
