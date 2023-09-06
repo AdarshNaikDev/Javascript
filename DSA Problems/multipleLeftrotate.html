@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let original=[1,3,5,7,9]
+        let arr=[1,3,5,7,9]
+        let kVal = [1,3,4,6]
+        
+        let ans;
+        function leftRotatebyNumber(k)
+        {
+            for(let i=0; i<k; i++)
+            {
+                 ans = leftRotateByOne();
+            }
+            
+            console.log(ans);
+            arr= original
+            //ans.length=0;
+        }
+
+        function leftRotateByOne()
+        {
+            
+            let temp = original[0]
+            for(let i=0; i<arr.length; i++)
+            {
+                arr[i]=arr[i+1]
+            }
+            arr[arr.length -1 ]= temp;
+           
+            return arr;
+        }
+    
+        leftRotatebyNumber(1);
+        leftRotatebyNumber(3);
+        leftRotatebyNumber(4);
+        leftRotatebyNumber(6);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

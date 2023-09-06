@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segregate even and odd numbers</title>
+    <script>
+       let input = [1,9,5,3,2,6,7,11]
+
+       //expected output = [2,6,1,9,5,3,7,11]
+       let even = [];
+       let odd = new Array();
+        let index =0;
+       while(index < input.length)
+       {
+        if(input[index]%2==0)
+        {
+            even.push(input[index])
+            index++
+        }
+        else{
+            odd.push(input[index])
+            index++;
+        }
+       }
+       let result= [...even,...odd]
+       console.log("Output ",result)
+    </script>
+</head>
+<body>
+    
+
+</body>
+</html>

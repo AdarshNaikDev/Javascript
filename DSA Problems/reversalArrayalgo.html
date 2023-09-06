@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Based on the d (position) rotate the array
+        //input = [23,4,35,67,89,90,65,43]
+        //d=3
+        //output = [67,89,90,65,43,23,4]
+
+        let input = [1, 2, 3, 4, 5, 6, 7];
+        let d=2;
+        let result = input.slice(d)
+        for(let i=0; i<d; i++)
+        {
+            result.push(input[i])
+        }
+        console.log("result is" , result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
