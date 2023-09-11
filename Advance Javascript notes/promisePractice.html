@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+let prom = new Promise(
+    function(resolve, reject){
+        setTimeout(()=>{
+            console.log("Set time out executed!!")
+            let nukm = Math.random()
+            console.log("the number was ", nukm.toFixed(1))
+            if(nukm<0.5)
+            {
+                resolve("resolved promise")
+            }
+            else if (nukm.toFixed(1) == 0.9 || nukm.toFixed(1)==0.8)
+            {
+                throw new Error("Some error occured")
+            }
+            else{
+                reject("rejected promise")
+            }
+        },2000)
+    }
+)
+
+prom.then(this.Resolve, this.Reject)
+    .catch(this.Error)
+
+
+function Resolve(value){
+console.log(value)
+}
+
+function Reject(value){
+console.log(value)
+}
+
+function Error(value){
+console.log(value)
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
