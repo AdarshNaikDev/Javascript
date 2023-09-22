@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    let s= "anagram" 
+    let t = "nagaram"
+    let res = new Object();
+    const findAnagram = ()=>{
+
+        if(s.length === t.length)
+        {
+            for(let i=0; i<s.length; i++)
+        {
+            if(res.hasOwnProperty(s[i]))
+            {
+                res[s[i]] +=1;
+                
+            }
+            else
+            {
+                res[s[i]] =1;
+            }
+        }
+       
+       for (let j=0; j<t.length; j++)
+       {
+        if(res.hasOwnProperty(t[j]))
+        {
+            res[t[j]]--;
+        }
+
+       }
+      
+       let count =0;
+       for(item in res)
+       {
+        
+        if(res[item]!==0)
+        {
+            count++;
+        }
+       
+       }
+       if(count ===0)
+       {
+        console.log("The given string is anagram")
+       }
+       else
+       {
+        console.log("The given string is not an anagram")
+       }
+
+        }
+        else
+        {
+            console.log("both the strings are of different length so not an anagram")
+        }
+          }
+
+    findAnagram();
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>
