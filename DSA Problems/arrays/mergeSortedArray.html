@@ -7,34 +7,35 @@
 <script>
     let arr1= [1,3,4,5]
     let arr2 = [2,4,6,8]
-    let len;
-    let result = new Array();
-   
-
+    //solution by kajal
     function mergeSortedArray(){
-        if(arr1.length >= arr2.length)
+      
+    let i= arr1.length-1;
+    let j= arr2.length-1;
+
+    
+    let k= arr1.length + arr2.length -1;
+
+   while(k > 0 )
+   {
+        if(arr1[i] > arr2[j])
         {
-            len = arr1.length;
+            arr1[k]=arr1[i];
+            k--;
+            i--;
         }
         else
         {
-            len = arr2.length;
+            arr1[k]=arr2[j];
+            k--;
+            j--;
         }
-        for(let i=0,j=0; i<len; i++)
-        {
-            if(arr1[i] < arr2[j])
-            {
-                result.push(arr1[i])
-                i++;
-            }
-            else
-            {
-                result.push(arr2[j])
-                j++;
-            }
-        }
-       
-        console.log("Final ans", result)
+   }
+
+   console.log(`Final merged array looks like this ${arr1}`)
+
+    
+
     }
 
     mergeSortedArray``;
