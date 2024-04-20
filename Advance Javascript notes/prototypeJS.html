@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function example(){
+            this.name;
+            this.address;
+            this.hello = function(){
+                console.log("Good morning",this.name)
+                console.log("Your address is ", this.address)
+            }
+        }
+
+        let ex = new example();
+        ex.name="Adarsh"
+        ex.address="thygarajnagar"
+        ex.hello();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

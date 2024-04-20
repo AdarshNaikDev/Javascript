@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Employee(){
+           
+            this.name;
+            this.doWork = function(){
+                console.log("Employee works for an organisation")
+            }
+            this.attendence = function(){
+                console.log("Employee sign in using scanner app")
+            }
+        }
+
+        function Developer(){
+            this.doWork = function(){
+                console.log("Does coding and debuggin all the day!")
+            }
+            this.weekends = function(){
+                console.log("on weekends he chills and eats good food")
+            }
+        }
+
+        let emp = new Employee();
+
+        
+        Developer.prototype =emp;
+        let dev = new Developer();
+        dev.doWork();// in both child and parent the same function is available it should execute from the child
+        dev.weekends();//it's available only in the child function not in the parent
+        dev.attendence(); // It's not available in the devloper function it should execute from the parent object
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

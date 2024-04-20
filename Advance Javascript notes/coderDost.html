@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+  //Perfect example for callback functions
+  
+  function calculateAge (BirthYear){
+    const age = 2024 - BirthYear;
+    return age;
+  }
+
+  function InfoProvider (birthPlace, BirthYear, fun){
+    const ans =fun(BirthYear)
+    console.log(`Hi, your birth took place in ${birthPlace} and you are currently ${ans} Years old `)
+  }
+
+  //InfoProvider("Kunigal", 1999, calculateAge)
+
+  function greet(msg){
+
+    return function (name){
+        console.log(msg + " " + name)
+    }
+  }
+
+  //greet("good morning!!")("Adarsh")
+
+  //const callGreet = greet("Good evening")
+  //callGreet("Sasuke")
+
+
+  const obj1 = {
+    name: "Adarsh"
+  }
+  obj1.name = "Narutoooo"
+  //console.log(obj1)
+
+  //how to delete an object
+  const obj ={
+    key1: "value1",
+    key2 : "value2"
+  }
+
+  delete obj.key1;
+
+  console.log("value of obj after deleting",obj)
+
+  //SImple use case of this keyword
+
+  console.log("This Keyword example how to use it simple case")
+
+  const person = {
+    name : "Adarsh",
+    lName: "Naik",
+    location: "Bengaluru",
+    ph: "+91 6361294119",
+    getSummary : function(){
+      return `"${this.name} ${this.lName} lives in ${this.location} whose phone number is ${this.ph}"`
+    }
+  }
+  
+  console.log("Person.getSummary result",person.getSummary());
+
+  //how to apply foreach method to iterate over an array
+console.log("how to apply foreach method to iterate over an array")
+  let dishes = ["Pani puri", "Dosa", "Biryani", "fish fry"];
+
+  dishes.forEach((item)=>{
+    console.log(item)
+  })
+
+  console.log(document)
+
+
+  let letters = ["a","g","c","y","o"]
+  
+
+  // let res = nums.concat(letters)
+  // console.log(res);
+
+  // let resn = nums.reverse();
+
+  // console.log(resn)
+
+  let letts =letters.join()
+  console.log(letts)
+
+  let nums = [1,2,3,4,9,87,0,12,34]
+  
+  nums.splice(4,0,1)
+  console.log(nums)
+
+  //filter function example
+
+  let giftItems = ["watch", "Cloth", "I phone 12", "I phone 15", "Mac book", "Applie", "Dairy milk"]
+
+  filteredArr = giftItems.filter((item)=>{
+    if(item.includes("I"))
+    {
+      return item;
+    }
+  })
+
+  console.log("Filtered gifts to my girl friend", filteredArr)
+ 
+
+  //Reduce method example
+
+let num = [12,3,5,15,6,9]
+let init =0;
+
+let asn = num.reduce((total,current)=>{
+return total = total + current;
+
+},init)
+
+console.log(asn)
+
+
+
+let arr = ["a","b","d","e","b","d","a","b","b"]
+
+let objj = {};
+
+for(let i=0; i<arr.length; i++)
+{
+  if(arr[i]in objj)
+  {
+    objj[arr[i]]= objj[arr[i]] +1;
+  }
+
+  else
+  {
+    objj[arr[i]]=1;
+  }
+}
+
+console.log("Object result ", objj)
+
+let objjj = { a: 2, b: 4, d: 2, e: 1 };
+
+// Convert object to array of key-value pairs and sort based on values
+let sortedArray = Object.entries(objjj).sort((a, b) => a[1] - b[1]);
+
+console.log("sorted arrahy",sortedArray)
+// Construct a new object from the sorted array
+let sortedObj = {};
+sortedArray.forEach(([key, value]) => {
+  sortedObj[key] = value;
+});
+
+console.log("Sorted object based on values:", sortedObj);
+
+  
+</script>
+<body>
+    
+</body>
+</html>
