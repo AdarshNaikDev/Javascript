@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createCart(){
+
+            let items = [];
+
+            let total =0;
+
+            function addItems(itemName,cost){
+
+                items.push(itemName)
+                total +=cost
+                console.log(`item ${itemName} was added to items item cost was : ${cost}`)
+            }
+
+            function getItems(){
+                return items;
+            }
+
+            function getTotal(){
+                return "$"+total;
+            }
+
+            return{
+                addItems,getItems,getTotal
+            }
+        }
+
+        let ref = createCart();
+        ref.addItems("Apple",300)
+        ref.addItems("Samsung",250)
+
+        
+
+        let ref2 = createCart();
+
+        console.log(ref.getItems());
+
+        console.log(ref.getTotal());
+
+        
+
+
+        
+    </script>
+</body>
+</html>
