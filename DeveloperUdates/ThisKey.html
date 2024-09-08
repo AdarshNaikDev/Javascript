@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(this);
+
+        // const person = {
+        //     name: "Adarsh",
+        //     greet: function(){
+        //         console.log("Good morning !", this.name)
+        //     },
+        //     greetA : ()=>{
+        //         console.log("Good afternoon !", this.name)      
+        //     }
+        // }
+        // person.greet();
+        // person.greetA();
+
+
+
+
+        let mainPlane = {
+            airline: "plain india",
+            iaCode : "F1",
+            bookings:[],
+            book: function(flightNo, name)
+            {
+                console.log(` ${name} Bookied flight on ${this.airline} code is ${this.iaCode} `)
+                this.bookings.push({flight:`${this.airline}`, name})
+            }
+        }
+
+        mainPlane.book("Indigo", "Ramesh")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function createCart(){
+
+            let items =[];
+            let total =0;
+            function addItems(itemName, itemCost){
+                items.push(itemName);
+                total += itemCost
+
+                console.log(`${itemName} was added to cart whose price is ${itemCost}`)
+
+            }
+
+            function getItems(){
+
+                return [...items];
+            }
+
+            function getTotalCost(){
+                
+                return "₹ " +total;
+            }
+
+            return{
+                addItems,getItems,getTotalCost
+            }
+        }
+
+        let reff = createCart();
+
+        reff.addItems("apple",200)
+        reff.addItems("Laptop", 50000)
+        
+        console.log(reff.getItems());
+        console.log(reff.getTotalCost());
+
+        
+
+    </script>
+</body>
+</html>

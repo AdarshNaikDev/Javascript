@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const mainPlane = {
+            flightName: "Air Bandia",
+            FCode: 1299,
+            bookings:[],
+            book: function(pName, age){
+                console.log(`${pName} ${age} years old travelling in flight ${this.flightName} whose code is ${this.FCode}`)
+
+                this.bookings.push({filghtName: this.flightName, passengerName: pName, age:age})
+               console.log(this.bookings)
+            }
+        }
+
+        const childPlane = {
+            flightName:"child Air",
+            FCode : 1122,
+            bookings:[],
+            
+        }
+
+        const book = mainPlane.book;
+
+        book.call(childPlane,"Suresh", 34)
+        book.call(mainPlane,"John",45)
+
+        book.apply(childPlane,["Tarun",12])
+
+        
+    </script>
+</body>
+</html>
