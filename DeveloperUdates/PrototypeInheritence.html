@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function Employee(){
+            this.name="",
+            this.work= function(){
+                console.log("basic work")
+            },
+            this.attendance = function(){
+                console.log("uses biometric")
+            }
+        }
+
+        function Manager(){
+            this.name="",
+            this.work=function(){
+                console.log("manages the team")
+            }
+        }
+
+        let emp = new Employee();
+        Manager.prototype = emp;
+
+        let man = new Manager();
+
+        man.name = "Vikas"
+        man.work();
+        man.attendance();
+
+        console.log(man)
+    </script>
+</body>
+</html>

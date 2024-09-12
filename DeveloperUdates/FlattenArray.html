@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<code>How are you \n I am fine</code>
+<pre></pre>
+
+    <script>
+
+
+    const arr =  [1,2,3,[4,5,[1,4,6]],9];
+    
+    let res = new Array();
+
+    function flattArray(arr){
+        
+        for(let i=0; i< arr.length; i++)
+    {
+        console.log(typeof(arr[i]))
+        if(typeof(arr[i]) != "object")
+        {
+            res.push(arr[i])
+        }
+        else{
+            let tempArr = arr[i]
+            flattArray(tempArr)
+        }
+    }
+    }
+
+    flattArray(arr);
+
+    for(let i=0; i< arr.length; i++)
+    {
+        console.log(typeof(arr[i]))
+        if(typeof(arr[i]) != "object")
+        {
+            res.push(arr[i])
+        }
+        else{
+            let tempArr = arr[i]
+            console.log("temp",tempArr)
+        }
+    }
+
+    console.log(res)
+    </script>
+</body>
+</html>
