@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dateObj = new Date("09-25-2024");
+    const day = dateObj.getDay(); 
+    console.log(day)
+    console.log(daysOfWeek[day]);
+    </script>
 </head>
 <body>
     <form>
@@ -85,6 +92,70 @@
         <br/>
         <progress value="30" max="100">progress</progress>
 
+<br/>
+        <label for="disk">Disk Usage:</label>
+<meter id="disk" value="0.65" max="1">70%</meter>
+
+<blockquote>New tag called blockquote
+    sdfdsfdsf
+</blockquote>
+<pre>THe taged is a 
+    asdfdsf
+    asdfdsf sadfas 
+</pre>
+
+<form>
+    <input type="text" placeholder="enter your name" required/>
+    <button>Submit name</button>
+</form>
+
+<h3>Map tag uses below</h3>
+<img src="https://i.imgur.com/OB0y6MR.jpeg" style="height: 250px; width: 350px; object-fit:conver ;" usemap="#example-map" alt="Example Image">
+
+<map name="example-map">
+  <area shape="rect" coords="34,44,270,350" alt="Clickable Area 1" href="https://example.com/area1">
+  <area shape="circle" coords="150,150,75" alt="Clickable Area 2" href="https://example.com/area2">
+  <area shape="poly" coords="100,100,200,200,300,100" alt="Clickable Area 3" href="https://example.com/area3">
+</map>
+
+
+
+<marquee behavior="scroll" direction="right">
+    <img width="200px" height="200px" src="https://i.imgur.com/OB0y6MR.jpeg" alt="Scrolling Image">
+  </marquee>
+
+  <marquee  direction="down" >This will scroll three times</marquee>
+
+<label>Choose your language</label>
+  <input style="margin-top: 100px; margin-bottom: 200px; color: red !important;" list="languages"/>
+  <datalist id="languages">
+    <option>English</option>
+    <option>Kannda</option>
+    <option>Hindi</option>
+    <option>Telgu</option>
+    <option>Bengali</option>
+  </datalist>
+
+  <br/>
+
+  <a href="#" aria-label="Go to home">
+    <i class="fa fa-home"></i>
+  </a>
+
+
+  <button aria-label="Close">
+    <img src="close-icon.png" alt="close btn">
+  </button>
+  
+
+  <div aria-label="Important notification">
+    <!-- Content -->
+     <p>Lorem ipsum ## dolor sit amet consectetur adipisicing elit. Laborum quaerat unde minus. Dolores, eius deleniti. Exercitationem porro, reiciendis ipsa aut sequi itaque nulla recusandae dolore corporis impedit, possimus maiores culpa!</p>
+  </div>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.8725545527227!2d75.54055047077154!3d13.966190662368357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbbaf00127939eb%3A0xc3deb0acd4d87241!2sThulajabhavani%20Krupa!5e0!3m2!1sen!2sin!4v1726425273136!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  
       
 </body>
 </html>

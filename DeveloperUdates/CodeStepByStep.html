@@ -18,38 +18,51 @@
         // }
         // console.log(foo())
 
-        // var a =0;
+        var a =0;
         
-        // function b(){
-        //     a = 10;
-        //     return;
-        //     var a = function(){
+        function b(){
+            a = 10;
+            return;
+            var a = function(){
 
-        //     }
+            }
             
-        // }
-        // b()
-        // console.log(a)
+        }
+        b()
+        console.log(a)
 
         //hoisting
 
-        function x(){
-            return y()
-            function y(){
-                return 10;
-            }
+        // function x(){
+        //     return y()
+        //     function y(){
+        //         return 10;
+        //     }
 
             
-            var y=()=>{
-                return 50
-            }
+        //     var y=()=>{
+        //         return 50
+        //     }
              
 
-        }
+        // }
 
-        console.log(x())
+        // console.log(x())
 
         
+//22-09-2024
+
+// (
+//     function(){
+//         var a=b=3;
+
+//     }
+// )()
+
+// console.log( a)
+// console.log( b)
+
+
     </script>
 </body>
 

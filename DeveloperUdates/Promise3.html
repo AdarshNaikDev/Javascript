@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchUsers(){
+    return new Promise((resolve, reject)=>{
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((responseData)=> responseData.json())
+        .then (data => resolve(data))
+        .catch(err => reject(err))
+    })
+}
+
+fetchUsers().then((data)=>{
+    console.log("green", data)
+}
+).catch(err=> console.log(err)).finally(()=>{
+    console.log("Finally promise completes execution")
+}
+    
+)
+    </script>
+</body>
+</html>
