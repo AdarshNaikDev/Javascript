@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function createBase(baseVal)
+        {
+            function addSix(param)
+            {
+                return baseVal+param;
+            }
+
+            return {
+                addSix
+            }
+        }
+
+        let exe = createBase(6)
+
+        console.log(exe.addSix(10))
+        console.log(exe.addSix(21))
+      
+    //   var addSix = createBase(6)
+    //   addSix(10)
+    //   addSix(21) 
+    </script>
+</body>
+</html>
