@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//hello world == > helo wrd
+        // let str = "hello world";
+
+        // let strArray = str.split("");
+        // console.log(strArray);
+        
+        // let charCount = new Object();
+
+        // strArray.forEach((item)=>{
+        //         if(charCount[item])
+        //         {
+        //             charCount[item] = charCount[item] + 1;
+        //         }
+        //         else{
+        //             charCount[item] = 1;
+        //         }
+        // })
+
+
+        // console.log("Character count", charCount);
+
+        // const uniqueChars = strArray.filter(char => charCount[char] === 1);
+
+        // console.log((uniqueChars));
+
+
+        function getUniqueChars(str) {
+  // Create a Set to store characters we've already seen
+  const seenChars = new Set();
+  // Create an array to store the result
+  const result = [];
+//hello
+  // Iterate through each character in the string
+  for (const char of str) {
+    // If the character is not a space and hasn't been seen before
+    if (!seenChars.has(char)) {
+         // Add to the result
+      seenChars.add(char); 
+        
+    }
+  }
+
+  // Join the result array into a string and return
+  return [...seenChars].join("");
+}
+
+// Example usage:
+const input = "hello world";
+const output = getUniqueChars(input);
+console.log(output); // Output: "helo wrd"
+
+        
+        
+        
+    </script>
+</body>
+</html>

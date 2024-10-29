@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    function createCart(){
+        let items =[];
+        let total = 0;
+
+        function addItems(itemName, price)
+        {
+            items.push(itemName);
+            total = total + price;
+
+        }
+
+        function getTotal(){
+            return total;
+        }
+
+        function getItems(){
+            return [...items]
+        }
+
+        return{addItems,getTotal,getItems}
+
+
+    }
+
+
+    let user1 = createCart();
+
+    user1.addItems("milk",25)
+    user1.addItems("iPhone", 80000)
+
+    console.log(user1.getItems())
+    console.log(user1.getTotal());
+
+let user2 = createCart();
+
+user2.addItems("onion", 20)
+user2.addItems("bike", 120000)
+
+console.log(user2.getItems())
+    console.log(user2.getTotal());
+
+
+    
+
+
+
+
+</script>
+</body>
+</html>
