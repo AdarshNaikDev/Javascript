@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str1 = "anagram"
+        let map = new Map();
+        for (let ch of str1) {
+            if (map.has(ch)) 
+            {
+                map.set(ch, map.get(ch)+1)
+            }
+            else{
+                map.set(ch, 1)
+            }
+        }
+
+        console.log(map)
+
+        for(const[key,val] of map)
+        {
+            console.log("key used is", key)
+            console.log("value of that key is ", val)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

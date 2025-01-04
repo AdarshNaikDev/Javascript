@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function debounce(func, delay) {
+    let timeoutId;
+
+    return function (...args) {
+        const context = this;
+
+        // Clear the previous timer if the function is called again
+        clearTimeout(timeoutId);
+
+        // Set a new timer
+        timeoutId = setTimeout(() => {
+            func.apply(context, args);
+        }, delay);
+    };
+}
+
+// Example usage
+function searchQuery(query) {
+    console.log("Searching for:", query);
+}
+
+const debouncedSearch = debounce(searchQuery, 300); // Debounce with 300ms delay
+
+// Simulating rapid input
+debouncedSearch("React");
+debouncedSearch("React Deb");
+debouncedSearch("React Debounce");
+// Only "Searching for: React Debounce" will be logged after 300ms of no further calls.
+
+    </script>
+</body>
+</html>

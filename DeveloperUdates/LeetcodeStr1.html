@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = "ABFCACDB"
+
+
+
+function minStr(s){
+    
+    for (let i = 0, j = 1; i < s.length; i++, j = i + 1) {
+        //console.log("outside if",s[i]+s[j])
+        
+        if(s[i]+s[j] == "AB" || s[i]+s[j] == "CD")
+        {
+            //console.log(`i value ${i} j value ${j}`)
+            let ans = s.slice(0,i) + s.slice(j+1);
+            console.log("ans", ans)
+            return minStr(ans)
+            
+        }
+        
+   
+}
+
+console.log(s)
+
+}
+
+minStr(str)
+
+
+//console.log(str.slice(0,0) + str.slice(2))
+
+    </script>
+</body>
+</html>
